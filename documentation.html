@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!---------bootstrap css------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <!----------bootstrap js--------->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!----------font awesome ---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!------google font popins------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <!--------external css-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/favicon-32x32.png">
+</head>
+<body>
+     <!--------------header start-------------->
+
+     <header>
+        <nav>
+            <div class="logo"><a href="#"><img src="images/logo design.png" alt=""></a></div>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+               </div>
+            <ul id="listmenu">
+                <li><a href="home.html">Home</a></li>
+               <li><a href="demo.html">Demo</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="faq.html">Faq</a></li>
+              <li><a href="">Documentation</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!----------header end --------->
+     <!-----------top to bottom scrollbar------>
+<a href="#" class="to-top">
+    <i class="fa-solid fa-chevron-down"></i>
+</a>
+  <!-----------about-the-documentation--------->
+  <section id="documentation" style="padding-top: 50px;">
+<div class="container">
+    <div class="col-lg-8 col-md-12">
+<div class="documentation">
+    <h2>AddrSearch API Documentation</h2>
+    <h3>Introduction</h3>
+<p>AddrSearch is a cloud-hosted Australian address lookup and validation service built on the authoritative Geocoded National Address File (G-NAF). It supports fuzzy address search, G-NAF validated address results, and postcode lookup. The API is designed for developers and businesses looking for reliable, scalable address solutions.</p>
+</div>
+ <h4 style="padding-top: 10px; font-weight: 600; color: #000; font-size: 20px;">Base URL</h4>
+    <div class="document-url-header">
+       <div class="document-text">
+ <p>https://api.addrsearch.com.au</p>
+       </div>
+        <div class="document-url">
+<a href="#"><span><i class="fa-solid fa-link"></i> Copy Link</span></a>
+        </div>
+    </div>
+    <br>
+<hr>
+<h4 style="padding-top: 10px; font-weight: 600; color: #000; font-size: 20px;">Authentication</h4>
+<p style="font-size: 15px; color: #626262; font-weight: 500;">All requests must include an <span>API key</span> as a query parameter: </p>
+    <div class="document-url-header">
+       <div class="document-text">
+ <p>?key=YOUR_API_KEY</p>
+       </div>
+        <div class="document-url">
+<a href="#"><span><i class="fa-solid fa-link"></i> Copy Link</span></a>
+        </div>
+    </div>
+    <br>
+<hr>
+<p style="font-size: 16px; color: #626262; font-weight: 500;">You can request your API key</p>
+    <div class="document-url-header">
+       <div class="document-text">
+ <p style="font-size: 15px; color: #626262; font-weight: 500;">support@addrsearch.com.au.</p>
+       </div>
+        <div class="document-url">
+<a href="#"><span><i class="fa-solid fa-link"></i> Copy Link</span></a>
+        </div>
+    </div>
+    <br>
+<hr>
+<div class="api-document">
+    <h3>API Endpoints</h3>
+<h4>/search</h4>
+<p>Returns a list of addresses based on fuzzy matching. This is useful for handling misspellings, partial inputs, and free-text entries.</p>
+<h4>Method: GET</h4>
+<p>Example: /search?address=53+Cardinal+Avenue+Beecroft+NSW&key=YOUR_API_KEY</p>
+<h4>/gnaf</h4>
+<p>Returns structured G-NAF validated address data. Ideal for applications that require the most accurate and official address data.</p>
+<h4>Method: GET</h4>
+<p>Example: /gnaf?address=53+Cardinal+Avenue+Beecroft+NSW&key=YOUR_API_KEY</p>
+<h4>/postcode</h4>
+<p>RLooks up suburbs and locations based on postcode input.</p>
+<h4>Method: GET</h4>
+<p>Example: /postcode?code=2159&key=YOUR_API_KEY</p>
+</div>
+<div class="api-note">
+    <h3>Notes and Limitations</h3>
+<ul>
+    <li>PO Box support is not available at this time but is part of the roadmap.</li>
+<li>Results are limited to 20 matches per query.</li>
+<li>The data is updated quarterly from official G-NAF releases.</li>
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----------footer---------->
+<section id="footer" style="margin-top: 100px;">
+<div class="container">
+  <div class="row" style="padding-top: 10px;">
+    <div class="col-md-4 mt-3">
+    <div class="footer-img">
+        <img src="images/logo design1.png" alt="">
+        <ul style="padding-top: 20px;">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <h4>Email: support@addrsearch.com.au</h4>
+<h4>Website: <a href="www.addrsearch.com.au">www.addrsearch.com.au</a></h4>
+<h4>Badge: Powered by Google Cloud</h4>
+    </div>
+  </div>
+<div class="col-md-4 mt-4">
+    <div class="footer-text">
+<h3>What Makes AddrSearch Different</h3>
+<p>We’re not just another address API. AddrSearch is purpose-built for the Australian landscape, using G-NAF data and modern cloud infrastructure to provide ultra-reliable, scalable address lookup functionality.
+</p>
+        </div>
+        </div>
+
+
+<div class="col-md-4 mt-4">
+    <div class="footer-text">
+        <h3>Navigation</h3>
+        <ul style="padding-top: 10px;">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="demo.html">Demo</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+
+  </div>
+  <hr class="line">
+  <span class="Copyright">© 2025 AddrSearch. All rights reserved.</span>
+</div>
+
+
+</section>
+
+
+    <script src="index.js"></script>
+   </body>
+   </html>
+
+
+

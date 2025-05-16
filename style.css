@@ -1,0 +1,782 @@
+*{
+    padding: 0;
+margin: 0;
+border:none;
+outline: none;
+box-sizing: border-box;
+text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+/*------------body start--------*/
+body{
+    color: #000;
+    background: #efefef;   
+}
+/*------------start header--------*/
+header{
+    width: 100%;
+    background: #fff;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:90%;
+    margin: 0px auto;
+    padding: 12px;
+}
+nav .logo img{
+    width: 200px;
+    height: 50px;
+}
+nav ul li{
+    display: inline;
+    list-style:none;
+    position: relative;
+}
+nav ul li a{
+    color: #801021;
+    font-size: 16px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+    position: relative;
+}
+nav ul li a:hover{
+    color: #bf1030;
+}
+nav ul li::before{
+    position: absolute;
+content: '';
+top: 24px;
+left: 10px;
+height: 2px;
+width: 80%;
+background: #bf1030;
+border-radius: 20px;
+opacity: 0;
+transition: 0.5s all linear;
+}
+nav ul li:hover::before{
+    opacity: 1;
+}
+/*----------this is mobile screen---------*/
+.menu{
+    border: 2px solid #801021;
+    border-radius: 5px;
+    padding: 7px 10px;
+z-index: 1000;
+cursor: pointer;
+display: none;
+}
+.menu i{
+    font-size: 17px;
+    color: rgb(143, 143, 143);
+}
+/*------------header end--------*/
+/*---------top to bottom scrollbar------------*/
+.to-top{
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    background:#801021;
+    bottom:20px;
+    right:32px;
+    border-radius: 10px;
+    z-index: 1000;
+    font-size: 25px;
+    color:#fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    }
+    .to-top:hover{
+        color: #bf1030;
+    }
+    .to-top-active{
+        opacity: 1;
+    pointer-events: auto;
+    }
+    /*-----------start-hero-area--------*/
+#hero{
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/website\ banner\ \(1\).jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+.hero{
+   padding-top: 80px;
+   width: 65%;
+}
+.hero h1{
+    font-size:50px;
+    color: #ffff;
+    font-weight: 700;
+    text-shadow: 7px 7px 7px #000;
+}
+.hero p{
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.7em;
+    padding-top: 10px;
+}
+.hero-link{
+    padding-top: 10px;
+}
+.hero-link a{
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.hero-link a:hover{
+    background: #bf1030;
+    color: #fff;
+}
+
+
+/*-----------Australia-address-------*/
+.address h2{
+    text-align: center;
+    font-size: 35px;
+    color: #626262;
+font-weight: 400;
+text-align: center;
+width: 70%;
+margin: 20px auto;
+}
+.address span{
+    font-weight: 700;
+    color: #801021;
+}
+.addresh-img h3{
+    font-size: 20px;
+    color: #3f3e3e;
+    font-weight:600;
+    margin-left: 15px;
+    margin-top: 5px;
+    position: relative;
+}
+.addresh-img h3::before{
+    position: absolute;
+    content: '';
+    top: 30px;
+    left: 0px;
+    background: #801021;
+    width: 150px;
+    height: 4px;
+    border-radius: 10px;
+}
+.addresh-text{
+     background: #fff;
+    border-radius: 10px;
+    height: 400px;
+    position: relative;
+    padding: 20px 20px;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+}
+.addresh-text img{
+    width: 100px;
+    width: 100px;
+    position: absolute;
+   left: 37%;
+   top: -50px;
+}
+.addresh-text h3{
+    font-size: 25px;
+    color: #626262;
+font-weight: 700;
+padding-top: 50px;
+padding-bottom: 10px;
+text-align: center;
+}
+.addresh-text p{
+    color: #626262;
+    line-height: 1.7em;
+    font-size: 15px;
+}
+.addresh-text ul li{
+     color: #626262;
+    line-height:1.8em;
+    font-size: 14px;
+}
+
+
+
+
+/*---------data-sources-----------*/
+.addr-bg{
+    background: #fff;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+    padding: 10px 10px;
+    border-radius: 5px;
+    height: 370px;
+}
+.addr{
+    display: flex;
+    align-items: center;
+}
+.addr img{
+    width: 100px;
+    height: 100px;
+    margin-right: 7px;
+}
+.addr h3{
+    font-size: 18px;
+    color: #626262;
+    font-weight: 700;
+padding-top: 10px;
+}
+.addr p{
+    font-size: 16px;
+    color: #801021;
+    padding-top: 10px;
+}
+.addr-text{
+    font-size: 15px;
+    color: #626262;
+    font-weight: 400;
+    line-height: 1.7em;
+    padding-top: 10px;
+}
+/*-------google-cloud-hosting---------*/
+#hosting{
+    background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/website\ banner\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    width: 100%;
+}
+.hosting h2{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+text-shadow: 7px 7px 7px #000;
+color: #fff;
+padding-top: 30px;
+}
+.hosting p{
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+
+}
+.hosting-text{
+    background: rgba(0,0,0,0.5);
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    height: 350px;
+}
+.hosting-text h3{
+    font-size: 20px;
+    padding-top: 10px;
+    color: #bf1030;
+    font-weight: 700;
+}
+.hosting-text p{
+    font-size: 16px;
+line-height: 1.7em;
+color: #fff;
+padding-top: 10px;
+}
+
+
+
+
+
+/*------------footer-------*/
+#footer{
+    background: #000;
+padding: 20px 20px;
+margin-top: 50px;
+}
+.footer-img img{
+    width:200px;
+    height: 40px;
+}
+.footer-img ul li{
+    display:block;
+    list-style: none;
+}
+.footer-img ul li a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 2em;
+}
+.footer-img ul li a:hover{
+    color: #bf1030;
+}
+.footer-img h4{
+    font-size: 15px;
+    color: #fff;
+}
+.footer-text h3{
+    font-size: 17px;
+    color: #bf1030;
+}
+.footer-text p{
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.7em;
+    padding-top: 20px;
+}
+.footer-text ul li{
+    display:block;
+    list-style: none;
+}
+.footer-text ul li a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1.7em;
+}
+.footer-text ul li a:hover{
+    color: #bf1030;
+}
+.line{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+}
+.Copyright{
+    font-size: 13px;
+    color:rgb(138, 133, 133);
+    font-weight: 400;
+}
+/*------------about-the-demo-------*/
+#demo-action{
+    background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/Demo\ page\ banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.demo{
+    padding-top: 70px;
+}
+.demo h1{
+   font-size:40px;
+    color: #ffff;
+    font-weight: 700;
+    text-shadow: 7px 7px 7px #000;
+    text-align: center;
+}
+.demo p{
+    font-size: 16px;
+    color: #fff;
+    padding-top: 10px;
+text-align: justify;
+text-align: center;
+}
+.demo-form{
+    background: #fff;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+    position: absolute;
+    left: 24%;
+    top: 65%;
+    height: 370px;
+    width: 50%;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.demo-form h2{
+    text-align: center;
+    font-size: 30px;
+    color: #801021;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+.demo-form input{
+display: block;
+width: 100%;
+border: 1px solid #808080;
+padding: 10px;
+border-radius: 5px;
+color: #808080;
+font-size: 15px;
+}
+.demo-form select{
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    color: #626262;
+    font-size: 15px;
+}
+.demo-form button{
+    margin-top: 15px;
+    padding: 5px 15px;
+    background: #801021;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+/*------------about-the-pricing-------*/
+.table-header{
+    text-align: center;
+}
+.table-header h2{
+   text-align: center;
+    font-size: 35px;
+    color: #801021;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+.table-header p{
+    font-size: 16px;
+    color: #626262;
+    padding-top: 10px;
+}
+.pricing-text p{
+    font-size: 15px;
+    color: #626262;
+    line-height: 1.7em;
+    text-align: justify;
+}
+.steps{
+    width: 100%;
+    background: #410912;
+    padding: 20px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+.steps h2{
+    font-size: 35px;
+    color: #626262;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+.steps span{
+    font-size: 14px;
+    color: #949090;
+}
+/*------------about-the-faq-------*/
+
+/*------------about-the-Documentation---------*/
+.documentation h2{
+    font-size: 35px;
+    color: #801021;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+.documentation h3{
+    font-size: 20px;
+    color: #626262;
+    font-weight: 700;
+    padding-top: 15px;
+}
+.documentation p{
+    font-size: 16px;
+    color: #626262;
+    font-weight: 400;
+    line-height: 1.7em;
+    text-align: justify;
+}
+.document-url-header{
+    background: #fff;
+    width: 100%;
+    padding: 7px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.document-text p{
+color: #626262;
+font-weight: 400;
+font-size: 15px;
+}
+.document-url a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #626262;
+    font-weight: 700;
+}
+.api-document{
+    padding-top: 15px;
+}
+.api-document h3{
+    font-size: 20px;
+    color:#000;
+font-weight: 700;
+}
+.api-document h4{
+color: #252525;
+font-weight: 600;
+font-size: 18px;
+padding-top: 10px;
+}
+.api-document p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #626262;
+    line-height: 1.7em;
+}
+.api-note h3{
+    padding-top: 15px;
+    color: #252525;
+    font-size: 20px;
+}
+.api-note ul li{
+color: #626262;
+font-weight: 500;
+line-height: 1.7em;
+font-size: 16px;
+}
+/*------------about-the-contact-------*/
+#contact-about{
+background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/contact\ banner.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+height: 350px;
+width: 100%;
+position: relative;
+}
+.contact-text h2{
+     text-align: center;
+    font-size: 40px;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    text-shadow: 2px 2px 4px #000;
+    font-weight: 700;
+}
+.contact-text p{
+    font-size: 17px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+.contact-form{
+background: #fff;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+    position: absolute;
+    left: 28%;
+    top: 60%;
+    height: 460px;
+    width: 45%;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.contact-form label{
+    font-size: 17px;
+    color: #626262;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.contact-form input{
+    display:block;
+    width: 100%;
+    border: 1px solid #c5c0c0;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #626262;
+    background:none;
+    outline: none;
+    border-radius: 5px;
+}
+.contact-form textarea{
+    font-size: 16px;
+    color: #626262;
+padding: 10px;
+width: 100%;
+height: 100px;
+background: none;
+outline: none;
+border: 1px solid #c5c0c0;
+}
+.contact-form button{
+    margin-top: 15px;
+    background-color: #801021;
+    padding: 7px 15px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.contact-link-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    width: 100%;
+}
+.contact-link1{
+    flex-basis: 50%;
+}
+.contact-link2{
+    flex-basis: 50%;
+}
+.contact-link1 h4{
+font-size:16px;
+color: #626262;
+font-weight: 600;
+}
+.contact-link1 p{
+    font-size:15px;
+    color: #801021;
+    font-weight: 600;
+}
+.contact-link2 ul li{
+display: inline;
+list-style: none;
+}
+.contact-link2 ul li a{
+    background: #801021;
+    padding: 5px 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.contact-link2 ul li a i{
+    font-size: 16px;
+    color: #fff;
+
+}
+
+
+
+/*------------this is for mobile screen-------*/
+@media only screen and (max-width: 771px){
+    .container{
+        width: 100%;
+    }
+    nav{
+width: 90%;
+    }
+  nav .logo img{
+    width: 150px;
+    height: 35px;
+}
+    .menu{
+        display: block;
+        font-size: 30px;
+        color: #000;
+    }
+    .main{
+        margin-top: 60px;
+    }
+    nav ul li::before{
+display: none;
+    }
+    #listmenu{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 75px;
+        left: 0;
+        background: #000;
+        overflow: hidden;
+        max-height: 0;
+        transition: 0.5s;
+        z-index: 1000;
+    }
+#listmenu li{
+    display: block;
+}
+#listmenu li a{
+    color: #fff;
+    line-height: 3em;
+    font-size: 1rem;
+}
+#listmenu i{
+    display: none;
+}
+#hero{
+    height: 340px;
+}
+.hero{
+    width: 100%;
+}
+.hero h1{
+    font-size: 25px;
+    margin-top: -30px;
+    text-align: left;
+}
+.hero p{
+    text-align: left;
+    font-size: 15px;
+}
+.hero-link{
+    margin-left: 0px;
+    width: 100%;
+}
+.hero-link a{
+    padding: 2px 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: 14px;
+}
+.address h2{
+margin-top: 50px;
+font-size: 22px;
+width: 80%;
+}
+.start-for-free h2{
+    font-size: 25px;
+}
+.addresh-text{
+    margin-top: 50px;
+    height: 420px;
+}
+.addresh-img h3{
+    margin-top: 30px;
+}
+#hosting{
+    height: 1800px;
+}
+.demo h1{
+    font-size: 27px;
+}
+.demo-form{
+    margin-top: 80px;
+    width: 90%;
+    left: 5%;
+    height: 400px;
+}
+.demo-form h2, .table-header h2{
+    font-size: 25px;
+}
+.contact-form{
+width: 90%;
+left: 5%;
+height: 480px;
+}
+.contact-link2{
+margin-top: -50px;    
+}
+.contact-link2 ul li{
+    display: block;
+    line-height: 2em;
+}
+}
+
+
